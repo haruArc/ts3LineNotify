@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui network  widgets
+QT       += core gui network  widgets sql
 
 TARGET = ts3LineNotify
 TEMPLATE = lib

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Dialog</class>
- <widget class="QDialog" name="Dialog">
+ <class>LineNotifyConfigDialog</class>
+ <widget class="QDialog" name="LineNotifyConfigDialog">
   <property name="windowModality">
    <enum>Qt::ApplicationModal</enum>
   </property>
@@ -26,7 +26,10 @@
    </size>
   </property>
   <property name="windowTitle">
-   <string>ts3 LineNotify　設定</string>
+   <string>ts3 LineNotify config</string>
+  </property>
+  <property name="locale">
+   <locale language="English" country="UnitedStates"/>
   </property>
   <property name="sizeGripEnabled">
    <bool>false</bool>
@@ -55,12 +58,12 @@
     <rect>
      <x>20</x>
      <y>50</y>
-     <width>151</width>
+     <width>191</width>
      <height>16</height>
     </rect>
    </property>
    <property name="text">
-    <string>自分の発言も読み上げる</string>
+    <string>notify myself.</string>
    </property>
   </widget>
   <widget class="QGroupBox" name="groupBox">
@@ -73,14 +76,14 @@
     </rect>
    </property>
    <property name="title">
-    <string>読み上げ対象テキストメッセージ</string>
+    <string>target text message</string>
    </property>
    <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>11</x>
       <y>21</y>
-      <width>210</width>
+      <width>212</width>
       <height>18</height>
      </rect>
     </property>
@@ -88,21 +91,21 @@
      <item>
       <widget class="QCheckBox" name="cbTextMessageTargetModeChannel">
        <property name="text">
-        <string>チャンネル</string>
+        <string>channel</string>
        </property>
       </widget>
      </item>
      <item>
       <widget class="QCheckBox" name="cbTextMessageTargetModeClient">
        <property name="text">
-        <string>クライアント</string>
+        <string>client</string>
        </property>
       </widget>
      </item>
      <item>
       <widget class="QCheckBox" name="cbTextMessageTargetModeServer">
        <property name="text">
-        <string>サーバ</string>
+        <string>server</string>
        </property>
       </widget>
      </item>
@@ -163,7 +166,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>パーソナルアクセストークン</string>
+    <string>Access token</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_3">
@@ -176,7 +179,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;https://notify-bot.line.me/my/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;取得&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;https://notify-bot.line.me/my/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;get&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
    <property name="openExternalLinks">
     <bool>true</bool>
@@ -188,7 +191,7 @@
   <connection>
    <sender>buttonBox</sender>
    <signal>rejected()</signal>
-   <receiver>Dialog</receiver>
+   <receiver>LineNotifyConfigDialog</receiver>
    <slot>reject()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -204,7 +207,7 @@
   <connection>
    <sender>buttonBox</sender>
    <signal>accepted()</signal>
-   <receiver>Dialog</receiver>
+   <receiver>LineNotifyConfigDialog</receiver>
    <slot>accept()</slot>
    <hints>
     <hint type="sourcelabel">

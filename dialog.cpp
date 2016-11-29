@@ -3,9 +3,9 @@
 #include <QtCore/QSettings>
 #include "globals.h"
 
-Dialog::Dialog(QWidget *parent) :
+LineNotifyConfigDialog::LineNotifyConfigDialog(QWidget *parent) :
     QDialog(parent),
-    ui(new Ui::Dialog)
+    ui(new Ui::LineNotifyConfigDialog)
 {
     ui->setupUi(this);
 
@@ -18,12 +18,12 @@ Dialog::Dialog(QWidget *parent) :
 
 }
 
-Dialog::~Dialog()
+LineNotifyConfigDialog::~LineNotifyConfigDialog()
 {
     delete ui;
 }
 
-void Dialog::accept() {
+void LineNotifyConfigDialog::accept() {
 
     QSettings cfg(QString::fromStdString(Globals::getConfigFilePath()), QSettings::IniFormat);
     cfg.setValue("sendToMyself", ui->checkBox->checkState());
@@ -43,6 +43,6 @@ void Dialog::accept() {
     QDialog::accept();
 }
 
-void Dialog::reject() {
+void LineNotifyConfigDialog::reject() {
     QDialog::reject();
 }

@@ -1,26 +1,26 @@
-#ifndef DIALOG_H
-#define DIALOG_H
+#ifndef LineNotifyConfigDialog_H
+#define LineNotifyConfigDialog_H
 
 #include <QDialog>
 
 namespace Ui {
-class Dialog;
+class LineNotifyConfigDialog;
 }
 
-class Dialog : public QDialog
+class LineNotifyConfigDialog : public QDialog
 {
     Q_OBJECT
 
 public:
-    explicit Dialog(QWidget *parent = 0);
-    ~Dialog();
+    explicit LineNotifyConfigDialog(QWidget *parent = 0);
+    ~LineNotifyConfigDialog();
 
 private:
-    Ui::Dialog *ui;
+    Ui::LineNotifyConfigDialog *ui;
 
 private slots:
     void accept();
     void reject();
 };
 
-#endif // DIALOG_H
+#endif // LineNotifyConfigDialog_H
